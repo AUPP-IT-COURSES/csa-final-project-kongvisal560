@@ -8,17 +8,17 @@ ROWS = 3
 COLS = 3
 
 symbol_count = {
-    "A": 2,
-    "B": 4,
-    "C": 6,
-    "D": 8
+    "🍎": 4,
+    "🍌": 6,
+    "🥥": 8,
+    "🥝": 10
 }
 
 symbol_value = {
-    "A": 5,
-    "B": 4,
-    "C": 3,
-    "D": 2
+    "🍎": 5,
+    "🍌": 4,
+    "🥥": 3,
+    "🥝": 2
 }
 
 
@@ -60,15 +60,17 @@ def print_slot_machine(columns):
     for row in range(len(columns[0])):
         for i, column in enumerate(columns):
             if i != len(columns) - 1:
-                print(column[row], end = " | ")
+                print(column[row], end = "  |  ")
             else:
-                print(column[row], end = "")
+                print(column[row], end = "  |  ")
 
         print()
 
 def deposit():
+    print("Welcome to Fun Slot Machine Game!")
+    print("")
     while True:
-        amount = input("What would you like to deposit? $")
+        amount = input("How much you want to put to play this game? $")
         if amount.isdigit():
             amount = int(amount)
             if amount > 0:
@@ -141,6 +143,4 @@ def main():
 main()
 
 
-
    
-        
